@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/api/users', require('./routes/userRoutes'))
 
+// On all our routes use the errorHandler
 app.use(errorHandler)
 
 app.listen(PORT, () => {
