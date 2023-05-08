@@ -1,3 +1,4 @@
+
 // Create middle ware
 const errorHandler = (err, req, res, next) => {
     // set the status code. Use res.statusCode if it is provided. If not, give a status code of 500
@@ -10,5 +11,4 @@ const errorHandler = (err, req, res, next) => {
         stack: process.env.NODE_ENV === 'production' ? null : err.stack
     })
 }
-
 module.exports = {errorHandler}
